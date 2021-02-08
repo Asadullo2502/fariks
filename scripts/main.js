@@ -10,7 +10,7 @@ setTimeout(() => {
 }, 1500);
 
 window.addEventListener('scroll', function() {
-    if(window.pageYOffset >=  375) {
+    if(window.pageYOffset >=  200) {
         linksFixed.classList.add('linkFix');
     } else {
         linksFixed.classList.remove('linkFix');
@@ -43,3 +43,18 @@ var swiper = new Swiper('.swiper-container', {
         prevEl: '.swiper-button-prev',
     },
 });
+
+let fixLinksBurger = document.querySelector('#fixLinks-burger');
+let fixLinks = document.querySelectorAll('.fixed_links');
+let insta = document.querySelector('.instagram');
+
+fixLinksBurger.addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    fixLinks.forEach( fixLinks => 
+        fixLinks.classList.toggle('fixMobile'));
+        insta.classList.toggle('fixMobile');
+        linksFixed.classList.toggle('showLink');
+        fixLinksBurger.classList.toggle('active1');
+
+})

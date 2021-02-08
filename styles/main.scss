@@ -132,7 +132,6 @@ p {
     bottom: 50px;
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
     background: white;
     padding: 10px;
@@ -144,6 +143,7 @@ p {
     
     
     
+    
 
     &.linkFix{
         right: 20px;
@@ -152,7 +152,7 @@ p {
     
     
 
-    a {
+    .fixed_links {
         width: 50px;
         height: 50px;
         margin-bottom: 20px;
@@ -194,6 +194,73 @@ p {
             width: 50px;
             height: 50px;
         }
+    }
+
+    
+
+    .burgerF {
+
+        display: none;
+        width: 35px;
+        height: 35px;
+        position: relative;
+        bottom: -10px;
+
+
+        &.active1 {
+            span {
+                height: 0;
+            }
+
+
+            span::before {
+                transform: rotate(45deg);
+            }
+
+            span::after {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    .burgerF span {
+        position: absolute;
+        top: 50%;
+        margin-top: -1px;
+        left: 50%;
+        margin-left: -10px;
+        width: 20px;
+        height: 2px;
+        background-color: #222;
+    }
+
+    .burgerF span,
+    .burgerF span::before,
+    .burgerF span::after {
+        position: absolute;
+        top: 50%;
+        margin-top: -1px;
+        left: 50%;
+        margin-left: -10px;
+        width: 20px;
+        height: 2px;
+        background-color: #222;
+    }
+
+
+    .burgerF span::before,
+    .burgerF span::after {
+        content: '';
+        display: block;
+        transition: all ease 0.5s;
+    }
+
+    .burgerF span::before {
+        transform: translateY(-5px);
+    }
+
+    .burgerF span::after {
+        transform: translateY(5px);
     }
 }
 
