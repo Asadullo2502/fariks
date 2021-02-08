@@ -1,0 +1,166 @@
+@media only screen and (max-width: 960px) {
+
+
+    .container {
+        max-width: 960px;
+
+        box-sizing: border-box;
+    }
+
+    .fixed_links {
+        width: 20px;
+        height: 20px;
+    }
+
+    .fixed_links svg {
+        width: 20px;
+        height: 20px;
+    }
+
+
+    .header-inner-logo {
+        width: 280px;
+        height: 90px;
+
+        
+    }
+
+    .header-inner-logo__img {
+        width: 280px;
+        height: 90px;
+    }
+
+    .header-inner-boxlink {
+        position: absolute;
+
+        right: 0;
+        left: 0;
+
+        display: flex;
+        align-items: center;
+
+        background: white;
+        padding: 20px 0;
+        transform: translateX(100%);
+        border: none;
+        z-index: 1;
+        transition: all ease 0.5s;
+
+
+
+
+    }
+
+    .header-inner-boxlink.show {
+        transform: translateX(0);
+        transition: all ease 0.5;
+    }
+
+    .header_burger {
+
+        z-index: 2;
+    }
+
+    .burger {
+        display: block;
+    }
+
+
+
+
+
+
+}
+
+@media only screen and (max-width: 720px) {
+
+
+    .container {
+        max-width: 960px;
+
+        box-sizing: border-box;
+    }
+
+
+
+    .header-inner-logo {
+        width: 200px;
+        height: 60px;
+
+        
+    }
+
+    .header-inner-logo__img {
+        width: 200px;
+        height: 60px;
+    }
+
+
+    .header-inner-boxlink {
+        z-index: 100000;
+
+        position: absolute;
+
+
+        left: 0;
+        right: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        background: rgba(255, 166, 0, 0.63);
+        padding: 20px 0;
+        transform: translateY(180px) scale(0);
+        border: none;
+
+        transition: all ease 0.5s;
+
+    }
+
+    .header-inner-boxlink__links {
+        color: black;
+        padding: 10px 0;
+    }
+
+    .header-inner-boxlink.show {
+        transform: translateY(0);
+        transition: all ease 0.5;
+        transform: translateY(180px) scale(1);
+    }
+
+    .header_burger {}
+
+
+}
+
+@media only screen and (max-width: 540px) {
+
+
+    .container {
+        max-width: 540px;
+
+        box-sizing: border-box;
+    }
+
+
+
+    .header-inner-logo {
+        width: 100px;
+        height: 30px;
+
+        
+    }
+
+    .header-inner-logo__img {
+        width: 100px;
+        height: 30px;
+    }
+
+
+
+
+
+
+}
