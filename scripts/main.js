@@ -1,9 +1,13 @@
 let loaderElement = document.querySelector('#loader');
 let linksFixed = document.querySelector('#linksFixed');
 
-window.addEventListener('load', function() {
+// window.addEventListener('load', function() {
+//     loaderElement.classList.add('lod');
+// })
+
+setTimeout(() => {
     loaderElement.classList.add('lod');
-})
+}, 1500);
 
 window.addEventListener('scroll', function() {
     if(window.pageYOffset >=  375) {
@@ -22,3 +26,20 @@ headerBurger.addEventListener('click', function(e) {
     headerBurger.classList.toggle('active');
     headerLinks.classList.toggle('show');
 })
+
+var swiper = new Swiper('.swiper-container', {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
